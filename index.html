@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./src/estilos/style.css" />
+    <link rel="icon" href="./src/public/imgs/404 Error with a cute animal-pana.svg">
+  </head>
+  <body>
+    <section class="container"> 
+      <div class="container-itens">
+    <h1 id="title">Clima na sua localização:</h1>
+      <div class="container-form">
+        <img src="./src/public/icons/location_on_FILL0_wght400_GRAD0_opsz48.svg" id="local"></img>
+        <form class="form-inicial" id="form">
+            <input type="text" placeholder="Localização" class="input-clima"/>
+            <button class="btn" type="submit">
+              <img src="./src/public/icons/search_FILL0_wght400_GRAD0_opsz48.svg" />
+            </button>
+        </form>
+      </div>
+      <h2 id="name-city"></h2>
+    <div class="container-cards"></div>
+  </div>
+
+    <script src="./src/dist/script.js" type="module"></script>
+  </body>
+</html>

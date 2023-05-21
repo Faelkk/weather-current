@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: #242d35;
+  height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+span {
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  border: none;
+  outline: none;
+}
+
+form input {
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+#clima {
+  width: 150px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.container-itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#umidade-icon,
+#vento-icon {
+  width: 30px;
+}
+
+.search-city {
+  display: flex;
+  align-items: center;
+}
+
+#local {
+  width: 25px;
+  padding: 5px;
+}
+
+.btn img {
+  width: 25px;
+}
+
+.btn {
+  border: none;
+  padding: 5px;
+  background: #fff;
+}
+
+.icon-location {
+  width: 25%;
+}
+
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.descricao {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.weather-detalhes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.umidade,
+.vento {
+  display: flex;
+  gap: 5px;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.formulario form {
+  display: flex;
+}
+
+.container-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-inicial {
+  display: flex;
+  align-items: center;
+}
+
+.container-form {
+  display: flex;
+  background: #fff;
+  align-items: center;
+  padding: 0 15px 0 15px;
+  border-radius: 2px;
+  margin-bottom: 5%;
+  position: relative;
+  justify-content: center;
+}
+
+.container-form.inativo {
+  display: none;
+}
+
+#title {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-cards.visible {
+  animation: show-left 0.3s forwards;
+  opacity: 1;
+}
+
+.container-cards.animation {
+  animation: show-right 0.3s forwards;
+}
+
+.container {
+  animation: show-down 0.8s forwards;
+}
+
+.card-erro {
+  background: #fff;
+  padding: 15px;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.response-400 h2 {
+  color: blue;
+  font-family: "Poppins", sans-serif;
+}
+
+.response-200 {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  background: #fff;
+  width: 280px;
+  padding: 10px;
+}
+
+.response-400 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  background: #fff;
+  width: 280px;
+  padding: 10px;
+}
+
+.response-400 img {
+  width: 250px;
+}
+
+.response-400 h2 {
+  font-size: 1rem;
+}
+
+#name-city {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  opacity: 0;
+}
+
+#name-city.active {
+  animation: show-leftTitle 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#name-city.animation {
+  animation: show-right 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.response-400.error {
+  animation: show-right 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.response-200.visible {
+  opacity: 1;
+  animation: show-left 0.3s ease-in-out;
+}
+
+@keyframes show-down {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show-leftTitle {
+  from {
+    transform: translateX(-100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
